@@ -1,4 +1,4 @@
-var should = require('should'),
+const should = require('should'),
     request = require('supertest'),
     app = require('../app.js'),
     agent = request.agent(app);
