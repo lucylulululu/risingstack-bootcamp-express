@@ -5,7 +5,7 @@ const tableName = 'repository'
 function up(knex) {
   return knex.schema.createTable(tableName, (table) => {
     table.integer('id').unsigned().primary()
-    table.integer('owner').notNullable()
+    table.integer('owner').unsigned().notNullable()
     table.foreign('owner').references('user.id').onDelete('CASCADE')
     table.string('full_name').notNullable()
     table.string('description').notNullable()
