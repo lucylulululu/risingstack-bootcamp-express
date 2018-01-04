@@ -1,6 +1,8 @@
 'use strict'
 
 const args = process.argv.slice(2)
+require('dotenv').config();
+
 if (args.includes('--local') || args.includes('-L')) {
   const user = process.env.MYSQL_USER || process.env.USER || 'root'
   const pw = process.env.MYSQL_PASSWORD || ''

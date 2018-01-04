@@ -4,6 +4,8 @@ const path = require('path')
 const joi = require('joi')
 const { parse } = require('pg-connection-string')
 
+require('dotenv').config();
+
 const envVarsSchema = joi.object({
   MYSQL_URI: joi.string().uri({ scheme: 'mysql' }).required(),
   MYSQL_SSL_CA: joi.string(),
